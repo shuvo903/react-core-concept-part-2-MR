@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { use } from 'react';
+import Friends from './Friends';
 
-const Users = () => {
+const Users = ({fetchUsers}) => {
+
+const users = use(fetchUsers)
+
+console.log(users);
+
     return (
         <div className='card'>
-            <h3>Users: </h3>
-            <p>sdfas sgadfga sd</p>
+            <h3>Users : {users.length} </h3>
+
         </div>
     );
 };
